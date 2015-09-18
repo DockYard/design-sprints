@@ -68,6 +68,33 @@ body {
   fill: #ffffff;
 }
 
+.nav ul ul {
+  margin-bottom: 5px;
+}
+
+.nav__link,
+.nav__sublink {
+  transition-duration: .25s;
+  transition-property: color;
+}
+.nav__link {
+  padding: 7px 48px;
+  display: block;
+  font-weight: 500;
+}
+.nav__link:focus,
+.nav__link:hover,
+.nav__link.active,
+.nav__sublink:focus,
+.nav__sublink:hover {
+  color: #790606;
+}
+.nav__sublink {
+  padding: 2px 16px 4px 72px;
+  display: block;
+  font-weight: 300;
+}
+
 .button {
   padding: 0 30px;
   display: inline-block;
@@ -85,12 +112,12 @@ body {
   transition-duration: .25s;
   transition-property: background-color, color;
 }
-@media (max-width: 771px) {
+@media (max-width: 899px) {
   .button {
     line-height: 46px;
   }
 }
-@media (min-width: 772px) {
+@media (min-width: 900px) {
   .button {
     line-height: 60px;
   }
@@ -98,7 +125,7 @@ body {
 
 .t-link {
   text-decoration: none;
-  color: #ee2658;
+  color: #e85d5d;
 }
 
 .dockyard {
@@ -131,30 +158,27 @@ body {
   background-image: url("images/pattern.svg");
   background-position: center;
 }
-@media (max-width: 771px) {
-  .masthead {
-    background-size: 560px;
-  }
-}
-@media (min-width: 772px) {
+@media (min-width: 900px) {
   .masthead {
     height: 100vh;
     min-height: 460px;
     max-height: 800px;
     box-sizing: border-box;
     position: relative;
+    z-index: -1;
   }
 }
-@media (min-width: 772px) and (max-height: 619px) {
+@media (min-width: 900px) and (max-height: 619px) {
   .l-masthead {
     padding-top: 60px;
   }
 }
-@media (min-width: 772px) and (min-height: 620px) {
+@media (min-width: 900px) and (min-height: 620px) {
   .l-masthead {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     width: calc(100% - 180px);
   }
@@ -165,15 +189,17 @@ body {
 }
 
 .home .heading,
-.home .subheading,
 .masthead .button {
   color: #e85d5d;
 }
 
 .home .heading,
 .home .subheading {
+  margin-right: auto;
+  margin-left: auto;
   padding-right: 30px;
   padding-left: 30px;
+  max-width: 825px;
 }
 
 .home .heading {
@@ -184,29 +210,33 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-@media (max-width: 771px) {
+@media (max-width: 899px) {
   .home .heading {
     margin-bottom: 30px;
     padding-top: 80px;
     font-size: 36px;
   }
 }
-@media (min-width: 772px) {
+@media (min-width: 900px) {
   .home .heading {
     margin-bottom: 54px;
     font-size: 72px;
   }
 }
-@media (max-width: 771px) {
+
+.home .subheading {
+  color: #767676;
+}
+@media (max-width: 899px) {
   .home .subheading {
     margin-bottom: 58px;
-    font-size: 16px;
+    font-size: 20px;
   }
 }
-@media (min-width: 772px) {
+@media (min-width: 900px) {
   .home .subheading {
     margin-bottom: 92px;
-    font-size: 24px;
+    font-size: 32px;
   }
 }
 
@@ -218,23 +248,19 @@ body {
   color: #ffffff;
 }
 
-.abouts {
-  overflow: auto;
-}
-
 .about {
   margin-top: 60px;
   margin-bottom: 60px;
   fill: #e85d5d;
 }
-@media (max-width: 1159px) {
+@media (max-width: 1239px) {
   .about svg {
     margin-bottom: 20px;
-    height: 100px;
-    width: 100px;
+    height: 72px;
+    width: 72px;
   }
 }
-@media (min-width: 1160px) {
+@media (min-width: 1240px) {
   .about {
     float: left;
     width: 30%;
@@ -246,15 +272,14 @@ body {
   }
   .about svg {
     margin-bottom: 18px;
-    height: 132px;
-    width: 132px;
+    height: 86px;
+    width: 86px;
   }
 }
 
 .about dt {
   font-size: 24px;
-  font-weight: 600;
-  text-align: center;
+  font-weight: 500;
 }
 @media (max-width: 1159px) {
   .about dt {
@@ -266,13 +291,12 @@ body {
   margin-right: auto;
   margin-left: auto;
   max-width: 300px;
-  font-size: 16px;
   line-height: 1.66;
-  color: #8d8d93;
 }
-@media (min-width: 772px) {
+@media (min-width: 900px) {
   .about dd {
     margin-top: 15px;
+    font-size: 22px;
   }
 }
 
@@ -385,7 +409,7 @@ body {
   float: right;
 }
 
-@media (max-width: 771px) {
+@media (max-width: 899px) {
   .l-wrap {
     margin-right: auto;
     margin-left: auto;
@@ -407,7 +431,7 @@ body {
   .logo svg {
     padding: 15px 20px;
     height: 30px;
-    width: 75px;
+    width: 30px;
   }
   .nav-link {
     padding: 0 20px; /* Need to set 0 because of default button styles */
@@ -431,7 +455,7 @@ body {
   .nav-link:hover,
   .nav-link:focus,
   .nav-link.nav-is-showing {
-    color: #006d92;
+    color: #790606;
   }
   .nav {
     padding-top: 22px;
@@ -478,7 +502,7 @@ body {
     line-height: 70px;
     text-align: center;
     opacity: .25;
-    color: #e85d5d;
+    color: #00bfff;
     fill: currentColor;
     transition-duration: .25s;
     transition-property: opacity;
@@ -489,14 +513,16 @@ body {
   }
 }
 
-@media (min-width: 772px) {
+@media (min-width: 900px) {
   .logo svg {
-    height: 64px;
+    position: relative;
+    left: -5%;
+    height: 150px;
     width: 100%;
   }
   main {
     float: right;
-    width: calc(100% - 250px);
+    width: calc(100% - 320px);
   }
   .l-wrap {
     margin-right: auto;
@@ -508,14 +534,14 @@ body {
   .header {
     position: fixed;
     height: 100%;
-    width: 250px;
+    width: 320px;
     background-color: #e85d5d;
   }
   .header:after {
     content: "";
   }
   .logo {
-    margin: 40px 50px 100px;
+    margin: 60px 50px 75px;
   }
   .logo img {
     width: 100%;
@@ -558,7 +584,7 @@ body {
   }
 }
 
-@media (min-width: 772px) and (max-height: 549px) {
+@media (min-width: 900px) and (max-height: 919px) {
   .header {
     position: absolute;
   }
@@ -567,34 +593,11 @@ body {
     position: fixed;
     top: 0;
     height: 100%;
-    width: 250px;
+    width: 320px;
     background-color: inherit;
     z-index: -1;
   }
   .footer {
     display: none;
-  }
-}
-
-@media (max-width: 1099px) {
-  .interior figure + figure {
-    margin-top: 18px;
-  }
-}
-
-@media (min-width: 1100px) {
-  .column {
-    float: left;
-    width: calc(50% - 40px)
-  }
-  .column:nth-of-type(odd) {
-    margin-right: 80px;
-  }
-  .interior figure {
-    float: left;
-    width: calc(50% - 9px);
-  }
-  .interior figure:nth-of-type(odd) {
-    margin-right: 18px;
   }
 }
