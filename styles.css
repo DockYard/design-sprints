@@ -80,6 +80,7 @@ body {
 .nav__link {
   padding: 7px 48px;
   display: block;
+  position: relative;
   font-weight: 500;
 }
 .nav__link:focus,
@@ -88,6 +89,15 @@ body {
 .nav__sublink:focus,
 .nav__sublink:hover {
   color: #790606;
+}
+.nav__link.active:before {
+  content: "";
+  width: 6px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #790606;
 }
 .nav__sublink {
   padding: 2px 16px 4px 72px;
@@ -419,8 +429,11 @@ body {
   }
 }
 
-.pagination {
+.l-pagination {
   margin-top: 88px;
+}
+
+.pagination {
   padding-top: 36px;
   padding-bottom: 45px;
   overflow: auto;
@@ -464,6 +477,16 @@ body {
 .pagination__link--next svg {
   margin-left: 6px;
   float: right;
+}
+@media (max-width: 1199px) {
+  .pagination__text--lg {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .pagination__text--sm {
+    display: none;
+  }
 }
 
 @media (max-width: 899px) {
@@ -549,24 +572,29 @@ body {
     margin-bottom: 40px;
     padding-bottom: 40px;
   }
-  .footer {
-    background-color: #182f36;
-  }
   .dockyard {
+    background-color: #e85d5d;
     display: block;
     bottom: 0;
     width: 100%;
     line-height: 70px;
     text-align: center;
-    opacity: .25;
-    color: #00bfff;
-    fill: currentColor;
+    color: #ffffff;
     transition-duration: .25s;
-    transition-property: opacity;
+    transition-property: color;
+  }
+  .dockyard svg {
+    fill: #ffffff;
+    transition-duration: .25s;
+    transition-property: fill;
   }
   .dockyard:hover,
   .dockyard:focus {
-    opacity: 1;
+    color: #790606;
+  }
+  .dockyard:hover svg,
+  .dockyard:focus svg {
+    fill: #790606;
   }
 }
 
@@ -590,13 +618,19 @@ body {
     clear: both;
   }
   .header {
-    position: fixed;
+    position: absolute;
     height: 100%;
     width: 320px;
     background-color: #e85d5d;
   }
   .header:after {
     content: "";
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 320px;
+    background-color: inherit;
+    z-index: -1;
   }
   .logo {
     margin: 60px 50px 75px;
@@ -633,30 +667,21 @@ body {
   .section {
     overflow: auto;
   }
+  .footer {
+    position: relative;
+    overflow: auto;
+    clear: both;
+  }
+  .l-pagination {
+    float: right;
+    width: calc(100% - 320px);
+  }
   .dockyard {
-    position: fixed;
+    position: absolute;
     bottom: 48px;
-    left: 40px;
+    left: 75px;
     color: #ffffff;
     fill: currentColor;
-  }
-}
-
-@media (min-width: 900px) and (max-height: 919px) {
-  .header {
-    position: absolute;
-  }
-  .header:after {
-    content: "";
-    position: fixed;
-    top: 0;
-    height: 100%;
-    width: 320px;
-    background-color: inherit;
-    z-index: -1;
-  }
-  .footer {
-    display: none;
   }
 }
 
