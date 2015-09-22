@@ -204,6 +204,7 @@ body {
 @media (max-width: 1099px) {
   .method {
     padding: 42px 20px;
+    z-index: -1;
   }
   .outcome {
     padding: 32px;
@@ -584,10 +585,10 @@ body {
     z-index: 1;
   }
   .logo {
+    padding: 15px 20px;
     float: left;
   }
   .logo svg {
-    padding: 15px 20px;
     height: 30px;
     width: 30px;
   }
