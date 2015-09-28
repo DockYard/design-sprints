@@ -79,6 +79,13 @@ a {
   display: block;
   line-height: 0;
   fill: #ffffff;
+  transition-duration: .25s;
+  transition-property: fill;
+}
+
+.logo:focus,
+.logo:hover {
+  fill: #790606;
 }
 
 .nav ul ul {
