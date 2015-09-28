@@ -59,6 +59,10 @@ i {
   font-style: italic;
 }
 
+a {
+  text-decoration: none;
+  outline: none;
+}
 
 .t-hidden {
   position: absolute !important;
@@ -154,13 +158,34 @@ i {
 }
 
 .t-link {
-  text-decoration: none;
   color: #e85d5d;
+  transition-duration: .25s;
+  transition-property: color;
+}
+.t-link:focus,
+.t-link:hover {
+  color: #790606;
 }
 
 .dockyard {
   font-size: 14px;
   text-decoration: none;
+  color: #ffffff;
+  transition-duration: .25s;
+  transition-property: color;
+}
+.dockyard svg {
+  fill: #ffffff;
+  transition-duration: .25s;
+  transition-property: fill;
+}
+.dockyard:hover,
+.dockyard:focus {
+  color: #790606;
+}
+.dockyard:hover svg,
+.dockyard:focus svg {
+  fill: #790606;
 }
 
 .dockyard svg:first-of-type {
@@ -381,6 +406,7 @@ i {
 .masthead .button {
   border-color: #e85d5d;
 }
+.masthead .button:focus,
 .masthead .button:hover {
   background-color: #e85d5d;
   color: #ffffff;
@@ -507,14 +533,6 @@ i {
 
 .interior a {
   font-weight: 600;
-  color: #e85d5d;
-  text-decoration: none;
-  transition-duration: .25s;
-  transition-property: color;
-}
-.interior a:focus,
-.interior a:hover {
-  color: #790606;
 }
 
 .interior ul {
@@ -563,9 +581,15 @@ i {
   border-color: #ee2658;
   color: #ee2658;
 }
+.interior .button:focus,
 .interior .button:hover {
   background-color: #ee2658;
   color: #ffffff;
+}
+
+.section__anchor {
+  display: block;
+  visibility: hidden;
 }
 
 .section__overview {
@@ -672,6 +696,7 @@ i {
   transition-property: color;
 }
 
+.pagination a:focus,
 .pagination a:hover {
   color: #790606;
 }
@@ -685,6 +710,7 @@ i {
   transition-property: fill;
 }
 
+.pagination a:focus svg,
 .pagination a:hover svg {
   fill: #790606;
 }
@@ -798,6 +824,10 @@ i {
   .interior h2 {
     margin-bottom: 14px;
   }
+  .section__anchor {
+    margin-top: -60px;
+    height: 60px;
+  }
   .interior section:not(:last-of-type) {
     margin-bottom: 60px;
   }
@@ -808,22 +838,6 @@ i {
     width: 100%;
     line-height: 70px;
     text-align: center;
-    color: #ffffff;
-    transition-duration: .25s;
-    transition-property: color;
-  }
-  .dockyard svg {
-    fill: #ffffff;
-    transition-duration: .25s;
-    transition-property: fill;
-  }
-  .dockyard:hover,
-  .dockyard:focus {
-    color: #790606;
-  }
-  .dockyard:hover svg,
-  .dockyard:focus svg {
-    fill: #790606;
   }
 }
 
@@ -897,11 +911,15 @@ i {
   .interior h2 {
     margin-bottom: 20px;
   }
-  .interior section:not(:last-of-type) {
-    margin-bottom: 82px;
-  }
   .section {
     display: inline-block;
+  }
+  .section__anchor {
+    margin-top: -82px;
+    height: 82px;
+  }
+  .interior section:not(:last-of-type) {
+    margin-bottom: 82px;
   }
   .footer {
     position: relative;
