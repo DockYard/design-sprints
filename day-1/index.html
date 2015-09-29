@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8'>
-    <title>Design sprints | Day 3: Design &amp; prototype</title>
-    <link href="styles.css" media="screen" rel="stylesheet" type="text/css">
-    <link rel="icon"  href="images/favicon.ico" type="image/x-icon">
     <base href="/design-sprints/">
+    <meta charset='utf-8'>
+    <title>Design sprints | Day 1: Analyze context and diverge</title>
+    <link href="styles.css" media="screen" rel="stylesheet" type="text/css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script type="text/javascript" src="scripts.js"></script>
     <meta content='Design sprints provide tools and techniques to allow small teams to move quickly and effectively on a project.' name='description'>
     <meta content='user experience design, UX design, design strategy, design thinking, design methods, SPA design, single page applications, Ember design, efficiency, efficient design, design strategy, design sprints' name='keywords'>
@@ -75,86 +75,52 @@
 
       <nav class="nav">
         <ul>
-          <li><a class="nav__link" href="background.html">Background</a></li>
-          <li><a class="nav__link" href="run-a-sprint.html">Should you run a sprint?</a></li>
-          <li><a class="nav__link" href="get-started.html">Get Started</a></li>
-          <li><a class="nav__link" href="day-1.html">Day 1: Analyze context</a></li>
-          <li><a class="nav__link" href="day-2.html">Day 2: Sketch &amp; define</a></li>
-          <li><a class="nav__link active" href="day-3.html">Day 3: Design &amp; prototype</a></li>
-          <li><a class="nav__link" href="day-4.html">Day 4: Test &amp; refine</a></li>
-          <li><a class="nav__link" href="whats-next.html">What’s next</a></li>
-          <li><a class="nav__link" href="resources.html">Resources</a></li>
+          <li><a class="nav__link" href="background">Background</a></li>
+          <li><a class="nav__link" href="run-a-sprint">Should you run a sprint?</a></li>
+          <li><a class="nav__link" href="get-started">Get started</a></li>
+          <li><a class="nav__link active" href="day-1">Day 1: Analyze context</a></li>
+          <li><a class="nav__link" href="day-2.">Day 2: Sketch &amp; define</a></li>
+          <li><a class="nav__link" href="day-3">Day 3: Design &amp; prototype</a></li>
+          <li><a class="nav__link" href="day-4">Day 4: Test &amp; refine</a></li>
+          <li><a class="nav__link" href="whats-next">What’s next</a></li>
+          <li><a class="nav__link" href="resources">Resources</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="interior">
       <div class="l-wrap">
-        <h1>Day 3: Design and prototype</h1>
+        <h1>Day 1: Analyze context and diverge</h1>
 
-        <span class="t-summary">On the third day, translate the sketches into visual design to create a clickable prototype. The level of detail you’ll need will depend on the type of testing you plan to do, and on the scope of the project.</span>
+        <span class="t-summary">On the first day, do the most you can to understand your users and their goals. The process may involve journey mapping, user interviews, and in-depth conversations with stakeholders.</span>
 
         <section class="section">
-          <h3>Compare and standardize</h3>
-          <p>Sometimes you’ll end up with several alternative sketches of the same interaction. On day 3, compare them and resolve differences. Also look for slightly different solutions to similar problems that you can standardize. Address typical interaction patterns in a standard manner when practical. Typical patterns include confirmation dialogs, intercom messages, login, and sign up. This saves time and allows you to give more attention to the custom or complex pieces.</p>
-
-          <h3>Be efficient with assets and tasks</h3>
-          <p>Often, multiple designers are working on a sprint. On day 3, you can split the tasks. One gets started on a visual design, while others can finish resolving interface inconsistencies and prioritizing wireframes, and start preparing the prototype. Once the the base style and grid are ready, share assets and keep working on separate sets of screens.</p>
-
-          <h3>Decide how “pretty” you need the prototypes to be</h3>
-          <p>A fully resolved, polished design takes a long time to execute. In a sprint, it is practical to move straight from the detailed hand sketched wireframes to a lighter version of visual design (if you’re doing any at all). When planning a sprint, determine the level of fidelity that will best serve user testing and other project goals.</p>
-          <p>Some users will be comfortable interacting with a paper prototype. Others may find it bewildering. If they are not comfortable discussing an interface based on a paper sketch, you’re not likely to get actionable feedback. Always consider the level of fidelity required for testing <i>before</i> committing to a schedule.</p>
-          <p>So, on day three, plan out which screens can be completed to this level of fidelity, and prioritize the most important ones. You may decide to make a few screens at a higher level of fidelity, as a polished, “real” looking interface, and leave others as wireframes.</p>
-          <p>There are a few different methods for prototyping, that test at different levels of fidelity. What’s best for you depends on the time you have allotted for visual design and user testing. For a very quick approach, try paper prototyping: photograph paper sketches with a smartphone and use a tool like the <a class="t-link" href="https://popapp.in/">POP app</a> to make them interactive. If more fidelity is desired, a combination of wireframes or designed screens and <a class="t-link" href="http://www.invisionapp.com/">InVision</a> (or <a class="t-link" href="https://marvelapp.com/">Marvel app</a>) might be better.</p>
-
-          <h3>Use real data where you can</h3>
-          <p>Designing with actual content is valuable for many reasons. If you design with placeholder text, you run the risk of missing connections in the interface, designing with information that doesn’t fit, or even misleading user testing.</p>
-          <p>This problem with non-real content comes in several flavors:</p>
-
-          <dl class="section__overview">
-            <dt>Cutting corners</dt>
-            <dd>This is about copy &amp; paste. It is tempting to reuse the exact same content for similar items on the screen, and call it done. It’s natural to want to spend more effort to make the actionable buttons look actionable than vetting the content we’re about to act upon. This is normal - you are, after all, designing an interface. But if you pay no attention to the content, you risk making the page meaningless to the user.</dd>
-          </dl>
-
-          <dl class="example">
-            <dt>Example</dt>
-            <dd>You might get feedback like:</dd>
-            <dd class="example__quote">“I guess these are search results, ordered by relevance, but can’t tell because they are all the same...”</dd>
-            <dd>The confusion can indicate that you should improve the level of fidelity of our content. The user was not able to read the content and got stuck on it before providing actionable feedback about the product itself. Sacrifice some visual polish for accuracy and you’ll get more honest results.</dd>
-          </dl>
-
-          <dl class="section__overview">
-            <dt>Incomplete knowledge</dt>
-            <dd>This happens when the designer has written custom content to the best of their knowledge. But the content might still look like a mistake to a domain expert. For example, if you’re trying to make a convincing interface that edits a part of a graph, and the feedback is - “this graph would not behave in this specific way” - guess what? You’ve established that this graph is convincing enough and that it looks editable.</dd>
-            <dd>When the user goes straight to commenting on the content, that can mean a success! The interface must have done its job in convincing them to “read” the content inside. It is of course a good idea to fix any significant content mistakes in the prototype.</dd>
-
-            <dt>Variables</dt>
-            <dd>When you create a prototype, it might be impractical to change user names in the interface each time. To make the process smooth without sacrificing speed, a quick introduction will suffice. Say something like “let’s say your name is Jenny, and today is Tuesday” to account for any variables that might show up in the interface.</dd>
-          </dl>
-
-          <h3>Communication methods</h3>
-          <p>On Day 3, the domain expert might not need to participate 100% because a significant portion of time is spent in design and prototyping programs. It is still important to have access to their expertise - so make sure communication channels are open.</p>
-
-          <dl class="example">
-            <dt>Example</dt>
-            <dd>One practical way to communicate is to create a dedicated Slack channel for quick back and forth discussions. Subject matter experts should still be available to answer any questions for the duration of days 3 and 4 – and ideally, even be in the same room. Ask questions like:</dd>
-            <dd class="example__quote">“Would an error message like this often come up?”</dd>
-            <dd class="example__quote">“Would 20 similar items ever show up on the screen at the same time?”</dd>
-            <dd>Daily progress reports, with notes, photos, and screenshots, can live in Basecamp or a similar project team-oriented tool.</dd>
-          </dl>
-
-          <h3>Focus</h3>
-          <p>To stay efficient at this stage, focus your effort on screens that are key to the interaction and are unique. Put less time into secondary or peripheral screens and standardize them when possible.</p>
+          <h3>Who are the users? What are their needs?</h3>
+          <p>Kick off the sprint by analyzing the situation around the product or feature you’re helping build. Who are the users? What problems do they encounter, and which ones can the product you’re building help them solve?</p>
 
           <dl class="method">
             <svg><use xlink:href="#method"></use></svg>
-            <dt>Create prototypes</dt>
-            <dd>You can create clickable prototypes using one of the online services. Pick the tool based on your desired testing scenario, and on the tool’s ability to quickly get the job done.</dd>
+            <dt>Select one or two personas</dt>
+            <dd>If there are several types of users, select one or two to focus on, often times the most common use cases. Use these personas to create “user flows” - often times a “happy path” and a more complex one. This allows you to fold in a spectrum of actions and motivations into two primary directed user flows. Even if the finished product addresses many users’ needs, by focusing on one or two primary users, you can move faster and with better focus. After this, you can move forward in a direction you’ve already validated, and address a wider range of personas and use cases in the future.</dd>
           </dl>
 
+          <h3>Consider interviewing real people at the start </h3>
+          <p>UX Designers rely a lot on the industry expertise and the experience our teams bring. But when possible, also interview one or two real users in the beginning of a sprint. This brings extra clarity and helps discover unmet needs and opportunities early on.</p>
+
+          <dl class="method">
+            <svg><use xlink:href="#method"></use></svg>
+            <dt>Journey map / experience map</dt>
+            <dd>It can be useful to make a journey map based on the interviews. The journey map is a high-level way to narrate and diagram the key interactions of the experience. How might the user arrive to the product? How might they use it? How might they engage with the product after use?</dd>
+            <dd>The map allows us to identify potential product features in context. Then, it’s much easier to decide which features need to be in or out of scope. This larger view helps to see what you’re considering to build out and how it relates to remaining and unexplored areas.</dd>
+          </dl>
+
+          <h3>Start to define actions for the product to accomplish</h3>
+          <p>When the product is new, you should start by defining the key interactions. These key interactions can be determined by the user flows, and also from doing research on other products that mirror certain interactions.</p>
+          <p>For an existing product, select the interactions you want to help improve, or which ones might be missing and should be explored.</p>
+
           <dl class="outcome">
-            <dt>The outcome of Day 3</dt>
-            <dd>At the end of day three, you should have a set of screens wired up in a prototype. In some sprints, where the focus is on exploration, high-fidelity designs might not be needed. In other sprints, there would be a detailed, high fidelity prototype, with many interactions wired up to make the experience seem real for user testing.</dd>
+            <dt>The outcome of Day 1</dt>
+            <dd>The outcome of the first day is an agreed-upon user flow for one or two specific use cases. Another important outcome is a shared understanding of priorities. Make sure to record potential directions that may be out of scope, but possibly be valuable to explore.</dd>
           </dl>
         </section>
       </div>
@@ -164,14 +130,14 @@
       <div class="l-pagination">
         <div class="l-wrap">
           <div class="pagination">
-            <a class="pagination__link--previous" href="day-2.html">
+            <a class="pagination__link--previous" href="get-started">
               <svg><use xlink:href="#previous"></use></svg>
-              <span class="pagination__text--lg">Day 2: Sketch &amp; define</span>
+              <span class="pagination__text--lg">Get started</span>
               <span class="pagination__text--sm">Previous</span>
             </a>
-            <a class="pagination__link--next" href="day-4.html">
+            <a class="pagination__link--next" href="day-2">
               <svg><use xlink:href="#next"></use></svg>
-              <span class="pagination__text--lg">Day 4: Test &amp; refine</span>
+              <span class="pagination__text--lg">Day 2: Sketch &amp; define</span>
               <span class="pagination__text--sm">Next</span>
             </a>
           </div>
