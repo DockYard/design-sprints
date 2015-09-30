@@ -79,8 +79,6 @@ a {
   display: block;
   line-height: 0;
   fill: #ffffff;
-  transition-duration: .25s;
-  transition-property: fill;
 }
 
 .logo:focus,
@@ -92,11 +90,6 @@ a {
   margin-bottom: 5px;
 }
 
-.nav__link,
-.nav__sublink {
-  transition-duration: .25s;
-  transition-property: color;
-}
 .nav__link {
   padding: 7px 48px;
   display: block;
@@ -122,7 +115,6 @@ a {
 .nav__sublink {
   padding: 2px 16px 4px 72px;
   display: block;
-  font-weight: 300;
 }
 
 .button {
@@ -157,9 +149,15 @@ a {
   .header {
     position: absolute;
   }
+  .dockyard {
+    position: absolute;
+  }
 }
 @media (min-width: 900px) and  (min-height: 860px) {
   .header {
+    position: fixed;
+  }
+  .dockyard {
     position: fixed;
   }
 }
@@ -178,33 +176,23 @@ a {
   font-size: 14px;
   text-decoration: none;
   color: #ffffff;
-  transition-duration: .25s;
-  transition-property: color;
-}
-.dockyard svg {
-  fill: #ffffff;
-  transition-duration: .25s;
-  transition-property: fill;
+  fill: currentColor;
 }
 .dockyard:hover,
 .dockyard:focus {
   color: #790606;
 }
-.dockyard:hover svg,
-.dockyard:focus svg {
-  fill: #790606;
+.dockyard svg {
+  position: relative;
 }
-
 .dockyard svg:first-of-type {
   margin-right: 4px;
   margin-left: 4px;
-  position: relative;
   top: 8px;
   height: 24px;
   width: 24px;
 }
 .dockyard svg:last-of-type {
-  position: relative;
   top: 1px;
   height: 10px;
   width: 75px;
@@ -466,12 +454,6 @@ a {
   max-width: 300px;
   line-height: 1.66;
 }
-@media (min-width: 900px) {
-  .about dd {
-    margin-top: 15px;
-    font-size: 22px;
-  }
-}
 @media (max-width: 899px) {
   .purposes .heading {
     margin-bottom: 30px;
@@ -479,9 +461,75 @@ a {
   }
 }
 @media (min-width: 900px) {
+  .about dd {
+    margin-top: 15px;
+    font-size: 22px;
+  }
   .purposes .heading {
     margin-bottom: 90px;
     font-size: 48px;
+  }
+}
+
+.footer {
+  padding-top: 48px;
+  height: 155px;
+}
+
+.l-github-cta {
+  height: inherit;
+  display: table;
+  background-color: #fcfcfc;
+}
+.github-cta {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.github-cta p {
+  position: relative;
+  bottom: 20px;
+  font-size: 20px;
+  color: #767676;
+}
+.github-cta a {
+  font-weight: 600;
+}
+.github-cta svg {
+  fill: #e85d5d;
+}
+@media (max-width: 549px) {
+  .github-cta {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .github-cta svg {
+    margin-bottom: 28px;
+    padding-top: 20px;
+    width: 40px;
+    height: 45px;
+  }
+}
+@media (min-width: 550px) {
+  .github-cta p,
+  .github-cta svg {
+    display: inline-block;
+  }
+  .github-cta svg {
+    margin-right: 22px;
+    width: 51px;
+    height: 57px;
+  }
+}
+@media (max-width: 899px) {
+  .l-github-cta {
+    width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  .l-github-cta {
+    float: right;
+    width: calc(100% - 320px);
   }
 }
 
@@ -684,11 +732,8 @@ a {
   }
 }
 
-.l-pagination {
-  margin-top: 88px;
-}
-
 .pagination {
+  margin-top: 48px;
   padding-top: 36px;
   padding-bottom: 45px;
   overflow: auto;
@@ -789,8 +834,6 @@ a {
     line-height: 60px;
     color: #ffffff;
     cursor: pointer;
-    transition-duration: .25s;
-    transition-color: color;
   }
   .nav-link:focus {
     outline: none;
@@ -870,8 +913,7 @@ a {
   .l-wrap.purposes {
     max-width: 920px;
   }
-  .interior .l-wrap,
-  .l-pagination .l-wrap {
+  .interior .l-wrap {
     max-width: 740px;
   }
   .header {
@@ -933,16 +975,9 @@ a {
     overflow: auto;
     clear: both;
   }
-  .l-pagination {
-    float: right;
-    width: calc(100% - 320px);
-  }
   .dockyard {
-    position: absolute;
-    bottom: 48px;
+    bottom: 70px;
     left: 75px;
-    color: #ffffff;
-    fill: currentColor;
   }
 }
 
