@@ -9,9 +9,7 @@ $(function() {
     $(".nav").toggleClass("is-showing");
     $(".nav-link").toggleClass("nav-is-showing");
   });
-});
 
-$(function() {
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -24,4 +22,12 @@ $(function() {
       }
     }
   });
+
+  $(".about__animation").bind("webkitAnimationEnd animationEnd", function(){
+    $(this).removeClass("animated");
+  })
+
+  $(".about__animation").hover(function(){
+    $(this).addClass("animated");
+  })
 });
