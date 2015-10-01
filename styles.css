@@ -43,11 +43,55 @@ footer, header, hgroup, menu, nav, section {
 
 
 
+/* FONTS */
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('fonts/2F5256_0_0.eot');
+  src: url('fonts/2F5256_0_0.eot?#iefix') format('embedded-opentype'),
+    url('fonts/2F5256_0_0.woff2') format('woff2'),
+    url('fonts/2F5256_0_0.woff') format('woff'),
+    url('fonts/2F5256_0_0.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('fonts/2F5256_2_0.eot');
+  src: url('fonts/2F5256_2_0.eot?#iefix') format('embedded-opentype'),
+    url('fonts/2F5256_2_0.woff2') format('woff2'),
+    url('fonts/2F5256_2_0.woff') format('woff'),
+    url('fonts/2F5256_2_0.ttf') format('truetype');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('fonts/2F5256_3_0.eot');
+  src: url('fonts/2F5256_3_0.eot?#iefix') format('embedded-opentype'),
+    url('fonts/2F5256_3_0.woff2') format('woff2'),
+    url('fonts/2F5256_3_0.woff') format('woff'),
+    url('fonts/2F5256_3_0.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('webfonts/2F5256_5_0.eot');
+  src: url('webfonts/2F5256_5_0.eot?#iefix') format('embedded-opentype'),
+  url('webfonts/2F5256_5_0.woff2') format('woff2'),
+  url('webfonts/2F5256_5_0.woff') format('woff'),
+  url('webfonts/2F5256_5_0.ttf') format('truetype');
+  font-weight: 900;
+}
+
+
+
 /* SHARED */
 
 body {
   font-size: 18px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Avenir", sans-serif;
   color: #1d1d26;
   background-color: #ffffff;
 }
@@ -95,7 +139,6 @@ a {
   padding: 7px 48px;
   display: block;
   position: relative;
-  font-weight: 400;
 }
 .nav__link:focus,
 .nav__link:hover,
@@ -146,7 +189,7 @@ a {
   }
 }
 
-@media (min-width: 900px) and (max-height: 859px) {
+@media (min-width: 900px) and (max-height: 899px) {
   .header {
     position: absolute;
   }
@@ -154,7 +197,7 @@ a {
     position: absolute;
   }
 }
-@media (min-width: 900px) and  (min-height: 860px) {
+@media (min-width: 900px) and  (min-height: 900px) {
   .header {
     position: fixed;
   }
@@ -322,7 +365,7 @@ a {
   .masthead {
     height: 100vh;
     min-height: 460px;
-    max-height: 800px;
+    max-height: 900px;
     box-sizing: border-box;
     position: relative;
   }
@@ -370,7 +413,7 @@ a {
 .home .heading {
   margin-right: auto;
   margin-left: auto;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 1;
   letter-spacing: 2px;
 }
@@ -696,7 +739,7 @@ a {
 .interior .example dt {
   padding-bottom: 18px;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 900;
 }
 .purposes .example dd {
   color: #767676;
