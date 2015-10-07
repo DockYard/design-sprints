@@ -451,35 +451,309 @@ a {
   color: #ffffff;
 }
 
-.about {
+.about__animation {
+  display: inline-block;
+}
+.resources__layer--1,
+.resources__layer--2,
+.resources__layer--3,
+.resources__layer--4 {
+  position: absolute;
+  animation-duration: .75s;
+  -moz-animation: none !important; /* Disable in Firefox because SVG transform origin bug */
+}
+.resources__layer--1,
+.resources__layer--2,
+.resources__layer--3 {
+  fill: #ffffff;
+  stroke: #e85d5d;
+  stroke-width: 40px;
+}
+.resources__layer--4 {
   fill: #e85d5d;
 }
+.resources:hover .resources__layer--1,
+.resources:hover .resources__layer--2,
+.resources:hover .resources__layer--3,
+.resources:hover .resources__layer--4 {
+  animation-timing-function: ease-in-out;
+}
+.about__animation.animated .resources__layer--1 {
+  animation-name: resources-one;
+}
+.about__animation.animated .resources__layer--2 {
+  animation-name: resources-two;
+}
+.about__animation.animated .resources__layer--3 {
+  animation-name: resources-three;
+}
+.about__animation.animated .resources__layer--4 {
+  animation-name: resources-four;
+}
+@keyframes resources-one {
+  0%,
+  100% {
+    bottom: 0;
+    transform: translate(0, 0);
+  }
+  50% {
+    bottom: 240px;
+    transform: translate(0, 240px);
+  }
+}
+@keyframes resources-two {
+  0%,
+  100% {
+    top: 0;
+    transform: translate(0, 0);
+  }
+  50% {
+    top: 80px;
+    transform: translate(0, 80px);
+  }
+}
+@keyframes resources-three {
+  0%,
+  100% {
+    bottom: 0;
+    transform: translate(0, 0);
+  }
+  50% {
+    bottom: 80px;
+    transform: translate(0, -80px);
+  }
+}
+@keyframes resources-four {
+  0%,
+  100% {
+    bottom: 0;
+    transform: translate(0, 0);
+  }
+  50% {
+    bottom: 256px;
+    transform: translate(0, -256px);
+  }
+}
+
+.methods__layer--1,
+.methods__layer--4,
+.methods__layer--5 {
+  fill: #ffffff;
+  stroke: #e85d5d;
+  stroke-width: 8;
+  stroke-miterlimit: 10;
+}
+.methods__layer--2,
+.methods__layer--3 {
+  fill: #e85d5d;
+}
+.methods-and-tools g {
+  position: absolute;
+  transform-origin: center;
+  animation-duration: .75s;
+  -moz-animation: none !important; /* Disable in Firefox because SVG transform origin bug */
+}
+.methods-and-tools:hover g:first-of-type,
+.methods-and-tools:hover g:last-of-type {
+  animation-timing-function: ease-in-out;
+}
+.about__animation.animated .methods-and-tools g:first-of-type {
+  animation-name: methods-group-one;
+}
+.about__animation.animated .methods-and-tools g:last-of-type {
+  animation-name: methods-group-two;
+}
+.methods__line {
+  stroke: #e85d5d;
+  stroke-width: 8;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  fill: none;
+  -moz-animation: none !important; /* Disable in Firefox because SVG transform origin bug */
+}
+.about__animation.animated .methods__line {
+  animation-name: methods-line;
+  animation-name: methods-line;
+  animation-duration: .75s;
+  animation-fill-mode: forwards;
+  animation-delay: .25s;
+}
+@keyframes methods-line {
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -100;
+  }
+}
+@keyframes methods-group-one {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(22deg);
+  }
+}
+@keyframes methods-group-two {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-22deg);
+  }
+}
+
+.target__circle {
+  fill: none;
+  stroke: #e85d5d;
+  stroke-width: 8;
+  stroke-miterlimit: 10;
+}
+.target__circle--lg,
+.target__circle--sm {
+  fill: #e85d5d;
+}
+.target__circle--lg {
+  transform: scale(0);
+}
+.about__animation.animated .target__circle--lg {
+  animation-name: target-circle-lg;
+  animation-timing-function: ease-in;
+  transform-origin: center;
+  animation-duration: 1.3s;
+  -moz-animation: none !important; /* Disable in Firefox because SVG transform origin bug */
+}
+.target__stroke--lg,
+.target__stroke--md,
+.target__stroke--sm {
+  fill: none;
+  stroke: #e85d5d;
+  stroke-miterlimit: 10;
+}
+.target__stroke--lg {
+  stroke-width: 24;
+  stroke-dasharray: 638;
+  stroke-dashoffset: 638;
+}
+.target__stroke--md,
+.target__stroke--sm {
+  stroke-width: 28;
+}
+.target__stroke--md {
+  stroke-dasharray: 355;
+  stroke-dashoffset: 355;
+}
+.target__stroke--sm {
+  stroke-dasharray: 151;
+  stroke-dashoffset: 151;
+}
+.about__animation.animated .target__stroke--lg,
+.about__animation.animated .target__stroke--md,
+.about__animation.animated .target__stroke--sm {
+  animation-fill-mode: backwards;
+  animation-duration: 1.3s;
+  -moz-animation: none !important; /* Disable in Firefox because SVG transform origin bug */
+}
+.about__animation.animated .target__stroke--lg {
+  animation-name: target-stroke-lg;
+}
+.about__animation.animated .target__stroke--md {
+  animation-name: target-stroke-md;
+}
+.about__animation.animated .target__stroke--sm {
+  animation-name: target-stroke-sm;
+}
+@keyframes target-circle-lg {
+  0%,
+  43%,
+  100% {
+    transform: scale(0);
+  }
+  42.9% {
+    transform: scale(1);
+  }
+}
+@keyframes target-stroke-lg {
+  0%,
+  42.9%,
+  100% {
+    stroke-dashoffset: 638;
+  }
+  43% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes target-stroke-md {
+  0%,
+  42.9%,
+  100% {
+    stroke-dashoffset: 355;
+  }
+  43%,
+  53% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes target-stroke-sm {
+  0%,
+  42.9%,
+  100% {
+    stroke-dashoffset: 151;
+  }
+  43%,
+  58% {
+    stroke-dashoffset: 0;
+  }
+}
+
 @media (max-width: 1239px) {
   .about {
     margin-top: 70px;
     margin-bottom: 100px;
   }
-  .about svg {
+  .best-practices,
+  .resources {
     margin-bottom: 20px;
     height: 72px;
+    width: 85px;
+  }
+  .methods-and-tools {
+    margin-bottom: 10px;
+    height: 108px;
     width: 85px;
   }
 }
 @media (min-width: 1240px) {
   .about {
-    margin-top: 90px;
     margin-bottom: 160px;
     float: left;
     width: 30%;
     background-size: 132px;
     line-height: 1.66;
   }
+  .about:nth-of-type(3n + 2) {
+    margin-top: 62px;
+  }
+  .about:not(:nth-of-type(3n + 2)) {
+    margin-top: 90px;
+  }
   .about:not(:last-child) {
     margin-right: 5%;
   }
-  .about svg {
+  .best-practices,
+  .resources {
     margin-bottom: 18px;
     height: 86px;
+    width: 102px;
+  }
+  .methods-and-tools {
+    margin-bottom: 5px;
+    height: 128px;
     width: 102px;
   }
 }
