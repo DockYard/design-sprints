@@ -77,11 +77,11 @@ footer, header, hgroup, menu, nav, section {
 
 @font-face {
   font-family: 'Avenir';
-  src: url('webfonts/2F5256_5_0.eot');
-  src: url('webfonts/2F5256_5_0.eot?#iefix') format('embedded-opentype'),
-  url('webfonts/2F5256_5_0.woff2') format('woff2'),
-  url('webfonts/2F5256_5_0.woff') format('woff'),
-  url('webfonts/2F5256_5_0.ttf') format('truetype');
+  src: url('fonts/2F5256_5_0.eot');
+  src: url('fonts/2F5256_5_0.eot?#iefix') format('embedded-opentype'),
+    url('fonts/2F5256_5_0.woff2') format('woff2'),
+    url('fonts/2F5256_5_0.woff') format('woff'),
+    url('fonts/2F5256_5_0.ttf') format('truetype');
   font-weight: 900;
 }
 
